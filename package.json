@@ -4,6 +4,7 @@
   "description": "🧩 Colby Fayock - Custom GitHub Actions in Node.js - GitHub Actions JavaScript Tutorial (February 5, 2021) | Link: https://www.youtube.com/watch?v=Ef0gPGUh9oo&ab_channel=ColbyFayock",
   "main": "index.js",
   "scripts": {
+    "build": "ncc build src/action.js -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/newojima/colbyfayock-cgaingajt-20210205/issues"
   },
-  "homepage": "https://github.com/newojima/colbyfayock-cgaingajt-20210205#readme"
+  "homepage": "https://github.com/newojima/colbyfayock-cgaingajt-20210205#readme",
+  "dependencies": {
+    "@vercel/ncc": "^0.34.0"
+  }
 }
