@@ -8,14 +8,11 @@ async function run() {
 
   const randomPos = Math.round(Math.random() * 1000);
 
-  // const url = `https://tenor.googleapis.com/v2/search?q=thank%20you&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high&key=${TENOR_TOKEN}`;
   const url = `https://tenor.googleapis.com/v2/search?q=thank%20you&key=${TENOR_TOKEN}&pos=${randomPos}&limit=1&media_filter=minimal&contentfilter=high`;
-
 
   const response = await fetch(url);
   const { results } = await response.json();
 
-  console.log(results[0].media_formats.tinygif);
   const gifUrl = results[0].media_formats.tinygif.url;
 
   const octokit = github.getOctokit(GITHUB_TOKEN);
